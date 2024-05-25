@@ -1,0 +1,16 @@
+{
+	"nodes":[
+		{"id":"f7bdc4955a62c249","type":"text","text":"BaseRole","x":-95,"y":-720,"width":250,"height":60},
+		{"id":"0d61b4f7f42773e1","type":"text","text":"```\napiVersion: rbac.authorization.k8s.io/v1\nkind: ClusterRole\nmetadata:\n\tname: addition-to-base\n\tlabels:\n\t\tmy.org.com/aggregate-to-baseRole: \"true\"\nrules:\n- apiGroups: [\"\"]\n  resources: [\"secrets\"]\n  verbs: [\"get\", \"list\", \"watch\"]\n```","x":-260,"y":60,"width":560,"height":340},
+		{"id":"51161ed0861211ea","type":"text","text":"```\napiVersion: rbac.authorization.k8s.io/v1\nkind: ClusterRole\nmetadata:\n\tname: addition-to-base-monitoring\n\tlabels:\n\t\tmy.org.com/aggregate-to-baseRole: \"true\"\nrules:\n- apiGroups: [\"\"]\n  resources: [\"crontabs\"]\n  verbs: [\"get\", \"list\", \"watch\"]\n```","x":-940,"y":60,"width":560,"height":340},
+		{"id":"b18da6e9a352fe70","type":"text","text":"```\napiVersion: rbac.authorization.k8s.io/v1\nkind: ClusterRole\nmetadata:\n\tname: my-test-baseRole\naggregationRule:\n\tclusterRoleSelectors:\n\t- matchLabels:\n\t\tmy.org.com/aggregate-to-baseRole: \"true\"\nrules: []\n```","x":-560,"y":-500,"width":580,"height":320},
+		{"id":"0223b0229e68921c","x":-760,"y":740,"width":826,"height":790,"type":"text","text":"```\napiVersion: rbac.authorization.k8s.io/v1\nkind: ClusterRole\nmetadata:\n\tname: my-test-baseRole\naggregationRule:\n\tclusterRoleSelectors:\n\t- matchLabels:\n\t\tmy.org.com/aggregate-to-baseRole: \"true\"\nrules:\n- apiGroups: [\"\"]\n  resources: [\"secrets\"]\n  verbs: [\"get\", \"list\", \"watch\"]\n- apiGroups: [\"\"]\n  resources: [\"crontabs\"]\n  verbs: [\"get\", \"list\", \"watch\"]  \n```"}
+	],
+	"edges":[
+		{"id":"2fec61a85250c436","fromNode":"f7bdc4955a62c249","fromSide":"bottom","toNode":"b18da6e9a352fe70","toSide":"top"},
+		{"id":"df9e19f4f162b1e1","fromNode":"b18da6e9a352fe70","fromSide":"bottom","toNode":"0d61b4f7f42773e1","toSide":"top"},
+		{"id":"d46aeb4db7904151","fromNode":"b18da6e9a352fe70","fromSide":"bottom","toNode":"51161ed0861211ea","toSide":"top"},
+		{"id":"cee4af1b07ee379b","fromNode":"0d61b4f7f42773e1","fromSide":"bottom","toNode":"0223b0229e68921c","toSide":"top"},
+		{"id":"cbfd89f5c1563af6","fromNode":"51161ed0861211ea","fromSide":"bottom","toNode":"0223b0229e68921c","toSide":"top"}
+	]
+}

@@ -1,0 +1,33 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: my-test-baseRole
+aggregationRule:
+  clusterRoleSelectors:
+  - matchLabels:
+     my.org.com/aggregate-to-baseRole: "true"
+rules: []
+
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: addition-to-base-monitoring
+  labels:
+    my.org.com/aggregate-to-baseRole: "true"
+rules:
+- apiGroups: [""]
+  resources: ["crontabs"]
+  verbs: ["get", "list", "watch"]
+
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: addition-to-base
+  labels:
+    my.org.com/aggregate-to-baseRole: "true"
+rules:
+- apiGroups: [""]
+  resources: ["secrets"]
+  verbs: ["get", "list", "watch"]
