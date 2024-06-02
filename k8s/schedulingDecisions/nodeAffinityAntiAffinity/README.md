@@ -12,7 +12,7 @@
 		- Pod Disruption Budget
 		- Pod Topology Spread Constraints
 		- Pod Priority
-- Agenda (Today)
+- Agenda
 	- Kubernetes Scheduling Decisions
 	- Node Affinity
 		- Hard Affinity
