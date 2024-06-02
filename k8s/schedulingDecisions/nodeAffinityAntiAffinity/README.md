@@ -1,0 +1,14 @@
+
+- Pre-cap
+	- Scheduling Decision Past videos
+		- Pod Disruption Budget
+		- Pod Topology Spread Constraints
+		- Pod Priority
+- Agenda (Today)
+	- Kubernetes Scheduling Decisions
+	- Node Affinity
+		- Hard Affinity
+		- Soft Affinity
+	- Node Anti-Affinity
+	- Real-World Application
+	- Conclusion
