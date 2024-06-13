@@ -6,3 +6,4 @@
 + [Part 5 : Rocky Linux 9 Installation](https://youtu.be/-52XnhSVdHs)
 + [Part 6 : A Complete Guide on SSH ](https://youtu.be/pnOH5NHKt9E)
 + [Part 7 : Basic Linux Commands ](https://youtu.be/BeTLjquevW0)
++ [Part 8 : Mastering Vim: A Comprehensive Guide for New Users ](https://youtu.be/UJYFfKyR1t0)
