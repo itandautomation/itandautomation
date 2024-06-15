@@ -8,9 +8,9 @@
 
 # Content
 
-[k8s](./k8s)
+[All thing Kubernetes](./k8s)
 
-[linux-tutorial](/linux-tutorial)
+[All thing Nix*](/nix)
 
 
 <!---
