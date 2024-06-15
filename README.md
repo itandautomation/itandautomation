@@ -10,7 +10,7 @@
 
 [All thing Kubernetes](./k8s)
 
-[All thing Nix*](/nix)
+[All thing Nix*](/Nix)
 
 
 <!---
